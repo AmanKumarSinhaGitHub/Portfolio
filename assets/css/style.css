@@ -1284,7 +1284,7 @@ textarea.form-input::-webkit-resizer {
   border-color: var(--bittersweet-shimmer);
 }
 
-.form-btn {
+.download-btn {
   position: relative;
   width: 100%;
   background: var(--border-gradient-onyx);
@@ -1302,7 +1302,7 @@ textarea.form-input::-webkit-resizer {
   transition: var(--transition-1);
 }
 
-.form-btn::before {
+.download-btn::before {
   content: "";
   position: absolute;
   inset: 1px;
@@ -1312,28 +1312,28 @@ textarea.form-input::-webkit-resizer {
   transition: var(--transition-1);
 }
 
-.form-btn ion-icon {
+.download-btn ion-icon {
   font-size: 16px;
 }
 
-.form-btn:hover {
+.download-btn:hover {
   background: var(--bg-gradient-yellow-1);
 }
 
-.form-btn:hover::before {
+.download-btn:hover::before {
   background: var(--bg-gradient-yellow-2);
 }
 
-.form-btn:disabled {
+.download-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-.form-btn:disabled:hover {
+.download-btn:disabled:hover {
   background: var(--border-gradient-onyx);
 }
 
-.form-btn:disabled:hover::before {
+.download-btn:disabled:hover::before {
   background: var(--bg-gradient-jet);
 }
 
@@ -1661,12 +1661,12 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 30px;
   }
 
-  .form-btn {
+  .download-btn {
     --fs-6: 16px;
     padding: 16px 20px;
   }
 
-  .form-btn ion-icon {
+  .download-btn ion-icon {
     font-size: 18px;
   }
 }
@@ -1770,9 +1770,9 @@ textarea.form-input::-webkit-resizer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .form-btn {
+  .download-btn {
     width: max-content;
-    margin-left: auto;
+    margin: 3em;
   }
 }
 

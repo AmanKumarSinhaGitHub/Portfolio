@@ -86,3 +86,37 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+
+document.getElementById('downloadBtn').addEventListener('click', function () {
+  // Specify the path to your PDF file in the asset folder
+  var pdfFilePath = 'assets/aman-kumar-sinha-resume.pdf';
+
+  // Fetch the PDF file
+  fetch(pdfFilePath)
+    .then(response => response.blob())
+    .then(blob => {
+      // Create a Blob containing the PDF content
+      var blobUrl = URL.createObjectURL(blob);
+
+      // Create an anchor element and set its attributes
+      var a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = 'aman-kumar-sinha-resume.pdf'; // You can set the file name here
+
+      // Append the anchor element to the document
+      document.body.appendChild(a);
+
+      // Programmatically trigger a click event on the anchor element
+      a.click();
+
+      // Remove the anchor element from the document
+      document.body.removeChild(a);
+
+      // Revoke the Blob URL to free up resources
+      URL.revokeObjectURL(blobUrl);
+    })
+    .catch(error => {
+      console.error('Error fetching the PDF file:', error);
+    });
+});

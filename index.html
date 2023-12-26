@@ -1,70 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aman - Personal Portfolio</title>
 
-    <!--
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman - Personal Portfolio</title>
+
+  <!--
     - favicon
   -->
-    <link
-      rel="shortcut icon"
-      href="./assets/images/logo.ico"
-      type="image/x-icon"
-    />
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
 
-    <!--
+  <!--
     - custom css link
   -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!--
+  <!--
     - google font link
   -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
 
-  <body>
-    <!--
+<body>
+  <!--
     - #MAIN
   -->
 
-    <main>
-      <!--- #SIDEBAR -->
+  <main>
+    <!--- #SIDEBAR -->
 
-      <aside class="sidebar" data-sidebar>
-        <div class="sidebar-info">
-          <figure class="avatar-box">
-            <img
-              src="./assets/images/my-avatar.png"
-              alt="Aman Kumar Sinha Img"
-              width="80"
-            />
-          </figure>
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Aman Kumar Sinha Img" width="80" />
+        </figure>
 
-          <div class="info-content">
-            <h1 class="name" title="Aman Kumar Sinha">Aman Kumar Sinha</h1>
+        <div class="info-content">
+          <h1 class="name" title="Aman Kumar Sinha">Aman Kumar Sinha</h1>
 
-            <p class="title">Web developer</p>
-          </div>
-
-          <button class="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
-
-            <ion-icon name="chevron-down"></ion-icon>
-          </button>
+          <p class="title">Web developer</p>
         </div>
 
-        <div class="sidebar-info_more">
-          <div class="separator"></div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
 
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:amankrsinha07@gmail.com" class="contact-link">amankrsinha07@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2003-03-16">Mar 16 2003</time>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>India</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/AmanKumarSinhaGitHub" class="social-link" target="_blank" rel="noopener"
+              aria-label="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/amankumarsinha/" class="social-link" target="_blank" rel="noopener"
+              aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/AmanKumarSinha_" class="social-link" target="_blank" rel="noopener"
+              aria-label="Twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!--- #main-content-->
+
+    <div class="main-content">
+      <!--- #NAVBAR  -->
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!--- #ABOUT      -->
+
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>Hello, I am Aman Kumar Sinha</p>
+
+          <p>
+            Enthusiastic BCA graduate with a solid foundation in computer
+            science and a passion for web development.
+          </p>
+
+          <p>
+            Skilled in building dynamic and user-friendly applications,
+            leveraging expertise in HTML, CSS, JavaScript, React.js, Node.js,
+            and MongoDB.
+          </p>
+
+          <p>
+            Eager to apply my skills and collaborate on impactful projects
+            within the tech industry, I'm excited about the endless
+            possibilities of creating innovative solutions.
+          </p>
+        </section>
+
+        <!--- service      -->
+
+        <section class="service">
+          <h3 class="h3 service-title">What I Do</h3>
+
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40" />
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">
+                  Front-End Web Development
+                </h4>
+
+                <p class="service-item-text">
+                  Crafting interactive user interfaces using React, HTML, CSS,
+                  and JavaScript.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40" />
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">
+                  Back-End Web Development
+                </h4>
+
+                <p class="service-item-text">
+                  Building robust server-side applications with EJS, Node.js,
+                  Express.js, and MongoDB.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
+          <button class="modal-close-btn" data-modal-close-btn title="close">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+      </article>
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">R.N College, Hajipur</h4>
+
+              <span>2020-2023</span>
+
+              <p class="timeline-text">
+                Bachelor of Computer Applications (BCA)
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                Sahyogi High School, Hajipur
+              </h4>
+
+              <span>2020</span>
+
+              <p class="timeline-text">Intermediate (Science - PCM)</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Sahyogi High School</h4>
+
+              <span>2018</span>
+
+              <p class="timeline-text">Matriculation</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <div class="skill-container">
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">React</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">HTML</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">CSS</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">JavaScript</h5>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">EJS</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">NodeJs</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">ExpressJs</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">MongoDB</h5>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Git</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">GitHub</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Bootstrap</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">JQuery</h5>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">C Programming</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">C++</h5>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Python</h5>
+                </div>
+              </li>
+
+
+            </ul>
+          </div>
+
+          <button class="download-btn" id="downloadBtn" type="button">
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Download Resume</span>
+          </button>
+
+
+        </section>
+      </article>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="Front-End">
+              <a href="https://amankumarsinhagithub.github.io/React-To-Do-List-App/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-1.png" alt="Front-End-project" loading="lazy" />
+                </figure>
+                <h3 class="project-title">React-To-Do-List-App</h3>
+                <p class="project-category">Front-End</p>
+                <p class="project-details">ReactJs</p>
+                <p class="github-link">
+                  <a href="https://github.com/AmanKumarSinhaGitHub/React-To-Do-List-App" target="_blank">GitHub Link
+                    🔗</a>
+                </p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="Back-End">
+              <a href="https://to-do-list-rz0n.onrender.com/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-2.png" alt="Back-End-project" loading="lazy" />
+                </figure>
+                <h3 class="project-title">To-Do-List-App</h3>
+                <p class="project-category">Back-End</p>
+                <p class="project-details">EJS, NodeJs, ExpressJs, MongoDB</p>
+                <p class="github-link">
+                  <a href="https://github.com/AmanKumarSinhaGitHub/To-Do-List-App" target="_blank">GitHub Link 🔗</a>
+                </p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact Me</h2>
+        </header>
+
+        <section>
           <ul class="contacts-list">
             <li class="contact-item">
               <div class="icon-box">
@@ -72,519 +452,63 @@
               </div>
 
               <div class="contact-info">
-                <p class="contact-title">Email</p>
-
-                <a href="mailto:amankrsinha07@gmail.com" class="contact-link"
-                  >amankrsinha07@gmail.com</a
-                >
+                <a href="mailto:amankrsinha07@gmail.com" class="contact-link">amankrsinha07@gmail.com</a>
               </div>
             </li>
 
+            <!-- LinkedIn -->
             <li class="contact-item">
               <div class="icon-box">
-                <ion-icon name="calendar-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Birthday</p>
-
-                <time datetime="2003-03-16">Mar 16 2003</time>
-              </div>
-            </li>
-
-            <li class="contact-item">
-              <div class="icon-box">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-
-              <div class="contact-info">
-                <p class="contact-title">Location</p>
-
-                <address>India</address>
-              </div>
-            </li>
-          </ul>
-
-          <div class="separator"></div>
-
-          <ul class="social-list">
-            <li class="social-item">
-              <a
-                href="https://github.com/AmanKumarSinhaGitHub"
-                class="social-link"
-                target="_blank"
-                rel="noopener"
-                aria-label="GitHub"
-              >
-                <ion-icon name="logo-github"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a
-                href="https://www.linkedin.com/in/amankumarsinha/"
-                class="social-link"
-                target="_blank"
-                rel="noopener"
-                aria-label="LinkedIn"
-              >
                 <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-            <li class="social-item">
-              <a
-                href="https://twitter.com/AmanKumarSinha_"
-                class="social-link"
-                target="_blank"
-                rel="noopener"
-                aria-label="Twitter"
-              >
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </aside>
-
-      <!--- #main-content-->
-
-      <div class="main-content">
-        <!--- #NAVBAR  -->
-
-        <nav class="navbar">
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <button class="navbar-link active" data-nav-link>About</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Resume</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Portfolio</button>
-            </li>
-
-            <li class="navbar-item">
-              <button class="navbar-link" data-nav-link>Contact</button>
-            </li>
-          </ul>
-        </nav>
-
-        <!--- #ABOUT      -->
-
-        <article class="about active" data-page="about">
-          <header>
-            <h2 class="h2 article-title">About me</h2>
-          </header>
-
-          <section class="about-text">
-            <p>Hello, I am Aman Kumar Sinha</p>
-
-            <p>
-              Enthusiastic BCA graduate with a solid foundation in computer
-              science and a passion for web development.
-            </p>
-
-            <p>
-              Skilled in building dynamic and user-friendly applications,
-              leveraging expertise in HTML, CSS, JavaScript, React.js, Node.js,
-              and MongoDB.
-            </p>
-
-            <p>
-              Eager to apply my skills and collaborate on impactful projects
-              within the tech industry, I'm excited about the endless
-              possibilities of creating innovative solutions.
-            </p>
-          </section>
-
-          <!--- service      -->
-
-          <section class="service">
-            <h3 class="h3 service-title">What I Do</h3>
-
-            <ul class="service-list">
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/icon-dev.svg"
-                    alt="Web development icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">
-                    Front-End Web Development
-                  </h4>
-
-                  <p class="service-item-text">
-                    Crafting interactive user interfaces using React, HTML, CSS,
-                    and JavaScript.
-                  </p>
-                </div>
-              </li>
-
-              <li class="service-item">
-                <div class="service-icon-box">
-                  <img
-                    src="./assets/images/icon-dev.svg"
-                    alt="Web development icon"
-                    width="40"
-                  />
-                </div>
-
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">
-                    Back-End Web Development
-                  </h4>
-
-                  <p class="service-item-text">
-                    Building robust server-side applications with EJS, Node.js,
-                    Express.js, and MongoDB.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <div class="modal-container" data-modal-container>
-            <div class="overlay" data-overlay></div>
-            <button class="modal-close-btn" data-modal-close-btn title="close">
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-          </div>
-        </article>
-
-        <!--
-        - #RESUME
-      -->
-
-        <article class="resume" data-page="resume">
-          <header>
-            <h2 class="h2 article-title">Resume</h2>
-          </header>
-
-          <section class="timeline">
-            <div class="title-wrapper">
-              <div class="icon-box">
-                <ion-icon name="book-outline"></ion-icon>
               </div>
 
-              <h3 class="h3">Education</h3>
-            </div>
+              <div class="contact-info">
+                <a href="https://www.linkedin.com/in/amankumarsinha/" class="contact-link" target="_blank"
+                  rel="noopener">LinkedIn Profile</a>
+              </div>
+            </li>
 
-            <ol class="timeline-list">
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">R.N College, Hajipur</h4>
+            <!-- Twitter -->
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </div>
 
-                <span>2020-2023</span>
+              <div class="contact-info">
+                <a href="https://twitter.com/AmanKumarSinha_" class="contact-link" target="_blank"
+                  rel="noopener">Twitter Profile</a>
+              </div>
+            </li>
 
-                <p class="timeline-text">
-                  Bachelor of Computer Applications (BCA)
-                </p>
-              </li>
+            <!-- GitHub -->
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="logo-github"></ion-icon>
+              </div>
 
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">
-                  Sahyogi High School, Hajipur
-                </h4>
+              <div class="contact-info">
+                <a href="https://github.com/AmanKumarSinhaGitHub" class="contact-link" target="_blank"
+                  rel="noopener">GitHub Profile</a>
+              </div>
+            </li>
+          </ul>
 
-                <span>2020</span>
+          <h4 class="h4 contact-me">Contact Me NOW!</h4>
+        </section>
+      </article>
+    </div>
+  </main>
 
-                <p class="timeline-text">Intermediate (Science - PCM)</p>
-              </li>
-
-              <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Sahyogi High School</h4>
-
-                <span>2018</span>
-
-                <p class="timeline-text">Matriculation</p>
-              </li>
-            </ol>
-          </section>
-
-          <section class="skill">
-            <h3 class="h3 skills-title">My skills</h3>
-
-            <div class="skill-container">
-              <ul class="skills-list content-card">
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">React</h5>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">HTML</h5>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">CSS</h5>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">JavaScript</h5>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="skills-list content-card">
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">EJS</h5>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">NodeJs</h5>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">ExpressJs</h5>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">MongoDB</h5>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="skills-list content-card">
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">Git</h5>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">GitHub</h5>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">Bootstrap</h5>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">JQuery</h5>
-                  </div>
-                </li>
-              </ul>
-
-              <ul class="skills-list content-card">
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">C Programming</h5>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">C++</h5>
-                  </div>
-                </li>
-
-                <li class="skills-item">
-                  <div class="title-wrapper">
-                    <h5 class="h5">Python</h5>
-                  </div>
-                </li>
-
-               
-              </ul>
-            </div>
-          </section>
-        </article>
-
-        <!--
-        - #PORTFOLIO
-      -->
-
-        <article class="portfolio" data-page="portfolio">
-          <header>
-            <h2 class="h2 article-title">Portfolio</h2>
-          </header>
-
-          <section class="projects">
-            <ul class="project-list">
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="Front-End"
-              >
-                <a
-                  href="https://amankumarsinhagithub.github.io/React-To-Do-List-App/"
-                  target="_blank"
-                >
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                    <img
-                      src="./assets/images/project-1.png"
-                      alt="Front-End-project"
-                      loading="lazy"
-                    />
-                  </figure>
-                  <h3 class="project-title">React-To-Do-List-App</h3>
-                  <p class="project-category">Front-End</p>
-                  <p class="project-details">ReactJs</p>
-                  <p class="github-link">
-                    <a
-                      href="https://github.com/AmanKumarSinhaGitHub/React-To-Do-List-App"
-                      target="_blank"
-                      >GitHub Link 🔗</a
-                    >
-                  </p>
-                </a>
-              </li>
-
-              <li
-                class="project-item active"
-                data-filter-item
-                data-category="Back-End"
-              >
-                <a href="https://to-do-list-rz0n.onrender.com/" target="_blank">
-                  <figure class="project-img">
-                    <div class="project-item-icon-box">
-                      <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                    <img
-                      src="./assets/images/project-2.png"
-                      alt="Back-End-project"
-                      loading="lazy"
-                    />
-                  </figure>
-                  <h3 class="project-title">To-Do-List-App</h3>
-                  <p class="project-category">Back-End</p>
-                  <p class="project-details">EJS, NodeJs, ExpressJs, MongoDB</p>
-                  <p class="github-link">
-                    <a
-                      href="https://github.com/AmanKumarSinhaGitHub/To-Do-List-App"
-                      target="_blank"
-                      >GitHub Link 🔗</a
-                    >
-                  </p>
-                </a>
-              </li>
-            </ul>
-          </section>
-        </article>
-
-        <!--
-        - #CONTACT
-      -->
-
-        <article class="contact" data-page="contact">
-          <header>
-            <h2 class="h2 article-title">Contact Me</h2>
-          </header>
-
-          <section>
-            <ul class="contacts-list">
-              <li class="contact-item">
-                <div class="icon-box">
-                  <ion-icon name="mail-outline"></ion-icon>
-                </div>
-
-                <div class="contact-info">
-                  <a href="mailto:amankrsinha07@gmail.com" class="contact-link"
-                    >amankrsinha07@gmail.com</a
-                  >
-                </div>
-              </li>
-
-              <!-- LinkedIn -->
-              <li class="contact-item">
-                <div class="icon-box">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </div>
-
-                <div class="contact-info">
-                  <a
-                    href="https://www.linkedin.com/in/amankumarsinha/"
-                    class="contact-link"
-                    target="_blank"
-                    rel="noopener"
-                    >LinkedIn Profile</a
-                  >
-                </div>
-              </li>
-
-              <!-- Twitter -->
-              <li class="contact-item">
-                <div class="icon-box">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </div>
-
-                <div class="contact-info">
-                  <a
-                    href="https://twitter.com/AmanKumarSinha_"
-                    class="contact-link"
-                    target="_blank"
-                    rel="noopener"
-                    >Twitter Profile</a
-                  >
-                </div>
-              </li>
-
-              <!-- GitHub -->
-              <li class="contact-item">
-                <div class="icon-box">
-                  <ion-icon name="logo-github"></ion-icon>
-                </div>
-
-                <div class="contact-info">
-                  <a
-                    href="https://github.com/AmanKumarSinhaGitHub"
-                    class="contact-link"
-                    target="_blank"
-                    rel="noopener"
-                    >GitHub Profile</a
-                  >
-                </div>
-              </li>
-            </ul>
-
-            <h4 class="h4 contact-me">Contact Me NOW!</h4>
-          </section>
-        </article>
-      </div>
-    </main>
-
-    <!--
+  <!--
     - custom js link
   -->
-    <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 
-    <!--
+  <!--
     - ionicon link
   -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>

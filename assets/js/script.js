@@ -90,7 +90,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 document.getElementById('downloadBtn').addEventListener('click', function () {
   // Specify the path to your PDF file in the asset folder
-  var pdfFilePath = 'assets/aman-kumar-sinha-resume.pdf';
+  var pdfFilePath = 'assets/resume-aman-kumar-sinha.pdf';
 
   // Fetch the PDF file
   fetch(pdfFilePath)
@@ -102,7 +102,7 @@ document.getElementById('downloadBtn').addEventListener('click', function () {
       // Create an anchor element and set its attributes
       var a = document.createElement('a');
       a.href = blobUrl;
-      a.download = 'aman-kumar-sinha-resume.pdf'; // You can set the file name here
+      a.download = 'resume-aman-kumar-sinha.pdf'; // You can set the file name here
 
       // Append the anchor element to the document
       document.body.appendChild(a);

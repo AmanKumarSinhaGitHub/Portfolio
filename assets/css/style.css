@@ -884,6 +884,7 @@ main {
 .skill-container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .skills-title {
@@ -892,7 +893,8 @@ main {
 
 .skills-list {
   padding: 20px;
-  width: 20vw;
+  width: 25vw;
+  margin: 20px;
 }
 
 .skills-item:not(:last-child) {
